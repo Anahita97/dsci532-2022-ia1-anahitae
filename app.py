@@ -14,6 +14,7 @@ def plot_iris(xcol):
     return chart.to_html()
 app = Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
 
+server = app.server
 app.layout = html.Div([
         dcc.Dropdown(
             id='xcol', value='petalWidth',
